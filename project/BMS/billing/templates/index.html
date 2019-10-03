@@ -1,0 +1,15 @@
+
+
+<!-- <body>
+	<h1 style='color:red'>Hello World</h1>
+	<a href='add_article/'>Add New Article</a>
+ -->
+	{% for i in page_object %}
+	   {{i}}<br>
+	{% endfor %}
+
+	{% if page_object.has_pervious %}
+	    <a href= "?page={{page_object.previous_page_number}}">previous</a>
+	{% endif %}
+	{{page_object}}
+	    {% if page_object.has_next %}
